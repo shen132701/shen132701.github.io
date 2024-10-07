@@ -69,10 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="pages-c++/algorithm" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="pages-c++/好用的stl" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/04/c++/algorithm/" class="article-date">
-  <time class="dt-published" datetime="2024-10-04T12:22:02.000Z" itemprop="datePublished">2024-10-04</time>
+    <a href="/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/" class="article-date">
+  <time class="dt-published" datetime="2024-10-04T12:22:20.000Z" itemprop="datePublished">2024-10-04</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/04/c++/algorithm/">algorithm</a>
+      <a class="p-name article-title" href="/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/">好用的stl</a>
     </h1>
   
 
@@ -91,17 +91,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="空巢算法收容所"><a href="#空巢算法收容所" class="headerlink" title="空巢算法收容所&lt;关爱空巢算法&gt;"></a>空巢算法收容所&lt;关爱空巢算法&gt;</h1><h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><p>适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推</p>
-<p>主要思路：用一个列表存储已经递归过的数据</p>
-<h3 id="代码-例题：P1464"><a href="#代码-例题：P1464" class="headerlink" title="代码(例题：P1464)"></a>代码(例题：P1464)</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">ll ji[<span class="number">21</span>][<span class="number">21</span>][<span class="number">21</span>];</span><br><span class="line"><span class="function">ll <span class="title">f</span><span class="params">(ll a,ll b,ll c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a&lt;<span class="number">1</span>||b&lt;<span class="number">1</span>||c&lt;<span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;<span class="number">20</span>||b&gt;<span class="number">20</span>||c&gt;<span class="number">20</span>)<span class="keyword">return</span> <span class="built_in">f</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>);<span class="comment">//特判</span></span><br><span class="line">	<span class="keyword">if</span>(a&lt;b&amp;&amp;b&lt;c)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b][c<span class="number">-1</span>])ji[a][b][c<span class="number">-1</span>]=<span class="built_in">f</span>(a,b,c<span class="number">-1</span>);<span class="comment">//若此需要用的数据还未找到，就先找这个数据，以下同理</span></span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>])ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>]=<span class="built_in">f</span>(a,b<span class="number">-1</span>,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b<span class="number">-1</span>][c])ji[a][b<span class="number">-1</span>][c]=<span class="built_in">f</span>(a,b<span class="number">-1</span>,c);</span><br><span class="line">		<span class="keyword">return</span> ji[a][b][c<span class="number">-1</span>]+ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>]-ji[a][b<span class="number">-1</span>][c];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b][c])ji[a<span class="number">-1</span>][b][c]=<span class="built_in">f</span>(a<span class="number">-1</span>,b,c);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c])ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c]=<span class="built_in">f</span>(a<span class="number">-1</span>,b<span class="number">-1</span>,c);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>])ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>]=<span class="built_in">f</span>(a<span class="number">-1</span>,b,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>])ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>]=<span class="built_in">f</span>(a<span class="number">-1</span>,b<span class="number">-1</span>,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">return</span> ji[a<span class="number">-1</span>][b][c]+ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c]+ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>]-ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+        <h1 id="不废话-开袋即食"><a href="#不废话-开袋即食" class="headerlink" title="不废话 开袋即食"></a>不废话 开袋即食</h1><h2 id="cstring库"><a href="#cstring库" class="headerlink" title="cstring库"></a>cstring库</h2><p>stoi(字符串)：转数字</p>
+<h2 id="algorithm库"><a href="#algorithm库" class="headerlink" title="algorithm库"></a>algorithm库</h2><p>next_permutation(里面参数和sort参数格式一致)：数组按字典序的下一种排列</p>
+<p>prev_permutation(里面参数和sort参数格式一致)：数组按字典序的上一种排列</p>
+<h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><p>priority_queue &lt;数据类型，存储方式(一般为vector <int>),less(大优先)&#x2F;greater(小优先)<int>&gt;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/04/c++/algorithm/" data-id="cm1wx49rp0002krnoakig57ga" data-title="algorithm" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/" data-id="cm1yepgo200043znof3kl4dvc" data-title="好用的stl" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -117,7 +115,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -147,6 +145,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
+          </li>
         
           <li>
             <a href="/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/">好用的stl</a>
