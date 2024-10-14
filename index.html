@@ -69,137 +69,39 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-黄金" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="pages-题解" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/14/%E9%BB%84%E9%87%91/" class="article-date">
-  <time class="dt-published" datetime="2024-10-14T13:36:31.195Z" itemprop="datePublished">2024-10-14</time>
+    <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2024-10-07T02:26:12.000Z" itemprop="datePublished">2024-10-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>[TOC]</p>
-<h1 id="黄金价格走势的分析与预测"><a href="#黄金价格走势的分析与预测" class="headerlink" title="黄金价格走势的分析与预测"></a>黄金价格走势的分析与预测</h1><h2 id="论文背景"><a href="#论文背景" class="headerlink" title="论文背景"></a>论文背景</h2><p>黄金是一种金属元素，在史前时期已经被认知及高度重视，可能是人类最早使用的金属之一。其开采和加工过程复杂，需要专业的技术和设备。随着技术的发展，黄金的开采和加工效率不断提高，但成本也在逐渐上升。当下，黄金价格受多种因素影响，包括宏观经济、地缘政治、美元汇率、供需关系以及市场情绪等。黄金价格通常以盎司为单位进行交易，而在中国则习惯以“克”作为计重单位。黄金价格的波动较大，但长期来看，黄金作为避险资产的价值得到了广泛认可。投资者在分析黄金市场时，需要综合考虑这些因素，以便更准确地预测市场趋势和制定投资策略。</p>
-<h4 id="问题一："><a href="#问题一：" class="headerlink" title="问题一："></a>问题一：</h4><p>选取至少两个关键因素，并基于历史数据，建立一个数学模型来描述这些因素会如何影响黄金的价格，并解释每个自变量对于因变量的影响程度及其显著性；</p>
-<h4 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h4><p>基于你在问题一中建立的模型，结合当前经济形势和其他相关因素（例如，国际金融市场的预期变化、黄金供需情况等），预测 2024-2030 年黄金价格的大致走向；</p>
-<h4 id="问题三："><a href="#问题三：" class="headerlink" title="问题三："></a>问题三：</h4><p>基于你的模型分析和预测结果，在不同情景下（例如全球经济复苏、政治稳定或不稳定等）为潜在的黄金投资者提供策略建议</p>
-<h2 id="关键因素选择及理由"><a href="#关键因素选择及理由" class="headerlink" title="关键因素选择及理由"></a>关键因素选择及理由</h2><h3 id="（一）美元指数"><a href="#（一）美元指数" class="headerlink" title="（一）美元指数"></a>（一）美元指数</h3><p>黄金以美元计价，通常美元指数与黄金价格呈负相关关系。当美元指数上升时，意味着美元相对其他货币走强，持有美元的吸引力增加，对黄金的需求可能减少，从而导致黄金价格下降。</p>
-<h3 id="（二）通货膨胀率"><a href="#（二）通货膨胀率" class="headerlink" title="（二）通货膨胀率"></a>（二）通货膨胀率</h3><p>通货膨胀会降低货币的购买力，而黄金通常被视为一种抗通胀的资产。在高通胀时期，投资者往往会增加对黄金的需求，以保值增值，从而推动黄金价格上涨。</p>
-<h1 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h1><h2 id="一、数学模型建立"><a href="#一、数学模型建立" class="headerlink" title="一、数学模型建立"></a>一、数学模型建立</h2><p>建立多元线性回归模型：<br>$$<br>P&#x3D;\beta_0+\beta_1X_1+\beta_2X_2+\epsilon\<br>其中，P表示黄金价格（因变量），X_1表示美元指数（自变量），X_2表示通货膨胀率（自变量），\<br>\beta_0是截距，\beta_1和\beta_2是回归系数，\epsilon是误差项。<br>$$</p>
-<h2 id="二、影响程度及显著性解释"><a href="#二、影响程度及显著性解释" class="headerlink" title="二、影响程度及显著性解释"></a>二、影响程度及显著性解释</h2><h3 id="（一）回归系数的影响程度"><a href="#（一）回归系数的影响程度" class="headerlink" title="（一）回归系数的影响程度"></a>（一）回归系数的影响程度</h3><p>$$</p>
-<ol>
-<li>对于美元指数的回归系数\<br>\beta_1：如果\beta_1&lt;0，且绝对值较大，说明美元指数对黄金价格的影响程度较大。\<br>例如，\beta_1&#x3D;-0.5，意味着美元指数每上升一个单位，黄金价格可能下降 0.5 个单位。\</li>
-<li>对于通货膨胀率的回归系数\<br>\beta_2：如果\beta_2&gt;0，且绝对值较大，说明通货膨胀率对黄金价格的影响程度较大。\<br>比如，\beta_2&#x3D;0.3，表示通货膨胀率每上升一个百分点，黄金价格可能上涨 0.3 个单位。<br>$$</li>
-</ol>
-<h3 id="（二）显著性检验"><a href="#（二）显著性检验" class="headerlink" title="（二）显著性检验"></a>（二）显著性检验</h3><p>通过 t 检验来判断每个自变量对因变量的显著性。如果 t 统计量对应的 p - 值小于设定的显著性水平（通常为 0.05），则说明该自变量对因变量的影响是显著的。</p>
-<p>例如，假设对于美元指数的 t 检验结果显示 p - 值为 0.04，小于 0.05，这表明美元指数对黄金价格的影响是显著的。同理，如果通货膨胀率的 t 检验 p - 值也小于 0.05，则说明通货膨胀率对黄金价格的影响也是显著的。</p>
-<h2 id="三、带入-2023-年实际数据验证误差"><a href="#三、带入-2023-年实际数据验证误差" class="headerlink" title="三、带入 2023 年实际数据验证误差"></a>三、带入 2023 年实际数据验证误差</h2><h3 id="（一）数据收集"><a href="#（一）数据收集" class="headerlink" title="（一）数据收集"></a>（一）数据收集</h3><ol>
-<li>收集 2023 年的黄金价格数据，可以从金融数据提供商（如彭博、万得等）获取。</li>
-<li>同时收集 2023 年的美元指数数据和通货膨胀率数据。通货膨胀率可以用消费者价格指数（CPI）的变化率来表示。</li>
-</ol>
-<h3 id="（二）模型拟合与预测"><a href="#（二）模型拟合与预测" class="headerlink" title="（二）模型拟合与预测"></a>（二）模型拟合与预测</h3><ol>
-<li>假设我们已经收集了历史数据，并通过统计软件（如 R、Python 中的 statsmodels 库）对历史数据进行多元线性回归模型拟合，得到回归方程为：</li>
-</ol>
-<p>$$<br>P &#x3D; 1200 - 0.4X_1 + 0.2X_2</p>
-<p>其中，P为黄金价格，X_1为美元指数，X_2为通货膨胀率。\</p>
-<ol start="2">
-<li>现在将 2023 年的美元指数和通货膨胀率数据代入模型，预测黄金价格。<br>$$</li>
-</ol>
-<h3 id="（三）误差计算与分析"><a href="#（三）误差计算与分析" class="headerlink" title="（三）误差计算与分析"></a>（三）误差计算与分析</h3><p>$$</p>
-<ol>
-<li>假设 2023 年实际的黄金价格为P_{actual}，\通过模型预测得到的价格为P_{predicted}。\计算误差可以使用均方根误差（RMSE）、平均绝对误差（MAE）等指标。\</li>
-</ol>
-<p>均方根误差（RMSE）公式为：\sqrt{\frac{1}{n}\sum_{i&#x3D;1}^{n}(P_{actual,i}-P_{predicted,i})^2}\</p>
-<p>平均绝对误差（MAE）公式为：\frac{1}{n}\sum_{i&#x3D;1}^{n}|P_{actual,i}-P_{predicted,i}|\</p>
-<ol start="2">
-<li>分析误差产生的原因。可能的原因包括模型假设不成立、数据存在异常,缺失值、其他因素未被纳入模型等。\</li>
-</ol>
-<p>例如 ,2023 年美元指数为 95，通货膨胀率为 3%，代入模型得到预测价格为$P_{predicted}&#x3D;1200 - 0.4\times95 + 0.2\times3 &#x3D; 1162.6$。\</p>
-<p>如果实际价格为 1180，则平均绝对误差为：\</p>
-<p>|1180 - 1162.6| &#x3D; 17.4<br>$$</p>
-<p>可以根据误差大小评估模型的准确性，并考虑对模型进行改进，如增加新的自变量、调整模型参数等。</p>
-<h1 id="问题二"><a href="#问题二" class="headerlink" title="问题二"></a>问题二</h1><h2 id="一、回顾问题一模型"><a href="#一、回顾问题一模型" class="headerlink" title="一、回顾问题一模型"></a>一、回顾问题一模型</h2><p>$$<br>假设我们在问题一中建立的多元线性回归模型为\<br>P &#x3D; \beta_0+\beta_1X_1+\beta_2X_2+\epsilon\<br>其中P是黄金价格，X_1是美元指数，X_2是通货膨胀率。\<br>并且通过历史数据分析得到了回归系数\beta_0、\beta_1（假设为负）和\beta_2（假设为正）的具体数值。<br>$$</p>
-<h2 id="二、当前经济形势及相关因素分析"><a href="#二、当前经济形势及相关因素分析" class="headerlink" title="二、当前经济形势及相关因素分析"></a>二、当前经济形势及相关因素分析</h2><h3 id="（一）美元指数-1"><a href="#（一）美元指数-1" class="headerlink" title="（一）美元指数"></a>（一）美元指数</h3><ol>
-<li><strong>经济基本面因素</strong><ul>
-<li>从美国经济现状来看，虽然经济增长仍有一定动力，但面临诸多挑战。例如，美国的债务上限问题、持续的财政赤字等因素可能会对美元的长期价值产生影响。如果美国经济在未来出现放缓迹象，美联储可能会调整货币政策，如降息等措施，这将导致美元指数下降。</li>
-</ul>
-</li>
-<li><strong>国际竞争因素</strong><ul>
-<li>随着其他主要经济体（如欧元区、中国等）的经济复苏和货币国际化进程的推进，美元在国际货币体系中的相对地位可能会受到一定程度的冲击。例如，欧元区经济的稳定增长可能会使得欧元相对美元升值，进而拉低美元指数。</li>
-</ul>
-</li>
-</ol>
-<h3 id="（二）通货膨胀率-1"><a href="#（二）通货膨胀率-1" class="headerlink" title="（二）通货膨胀率"></a>（二）通货膨胀率</h3><ol>
-<li><strong>宏观政策因素</strong><ul>
-<li>全球主要经济体在疫情后的经济复苏过程中，许多国家采取了宽松的货币政策和财政政策。这些政策的滞后效应可能会导致通货膨胀在未来一段时间内维持在一定水平。尽管各国央行在努力控制通胀，但实现通胀目标仍需要时间。</li>
-</ul>
-</li>
-<li><strong>供需失衡因素</strong><ul>
-<li>从全球供应链角度看，一些关键原材料供应短缺和劳动力市场紧张等问题依然存在，这可能会推动物价上涨。例如，能源价格的波动会影响到生产和运输成本，进而传导至消费端，推高通货膨胀率。</li>
-</ul>
-</li>
-</ol>
-<h3 id="（三）黄金供需情况"><a href="#（三）黄金供需情况" class="headerlink" title="（三）黄金供需情况"></a>（三）黄金供需情况</h3><ol>
-<li><strong>需求方面</strong><ul>
-<li><strong>投资需求</strong>：在经济不确定性增加的背景下，黄金作为避险资产的投资需求有望持续增长。例如，随着地缘政治紧张局势（如中东地区的冲突等）和金融市场波动（如股市的大幅波动），投资者会将资金转向黄金以保值增值。</li>
-<li><strong>工业需求</strong>：黄金在电子、医疗等工业领域的应用也在不断拓展。随着科技的进步，如5G技术的发展和医疗设备的升级，对黄金的工业需求可能会呈现稳步上升趋势。</li>
-<li><strong>首饰需求</strong>：在一些亚洲国家（如中国和印度），黄金首饰消费文化根深蒂固。随着这些国家居民收入水平的提高和消费观念的升级，对黄金首饰的需求也会保持一定的韧性。</li>
-</ul>
-</li>
-<li><strong>供给方面</strong><ul>
-<li>金矿开采面临着成本上升的压力，包括人力成本、设备成本和环保成本等。同时，新矿的勘探和开发需要较长的周期和大量的资金投入。这可能会限制黄金的供给增长速度，使得黄金市场的供需关系逐渐趋紧。</li>
-</ul>
-</li>
-</ol>
-<h3 id="（四）国际金融市场预期变化"><a href="#（四）国际金融市场预期变化" class="headerlink" title="（四）国际金融市场预期变化"></a>（四）国际金融市场预期变化</h3><ol>
-<li><strong>利率预期</strong><ul>
-<li>市场预期未来全球利率走势会出现分化。美国等部分国家可能会根据自身经济复苏情况调整利率政策。如果美国进入降息周期，实际利率下降，这将降低持有黄金的机会成本，从而刺激黄金价格上涨。</li>
-</ul>
-</li>
-<li><strong>股市和债券市场表现</strong><ul>
-<li>股市的波动会影响投资者的资产配置决策。如果股市出现大幅下跌或持续低迷，投资者为了避险可能会增加对黄金的配置。同时，债券市场的收益率变化也会对黄金价格产生间接影响。例如，当债券收益率下降时，黄金的相对吸引力会增加。</li>
-</ul>
-</li>
-</ol>
-<h2 id="三、2024-2030年黄金价格走向预测"><a href="#三、2024-2030年黄金价格走向预测" class="headerlink" title="三、2024 - 2030年黄金价格走向预测"></a>三、2024 - 2030年黄金价格走向预测</h2><h3 id="（一）美元指数预测"><a href="#（一）美元指数预测" class="headerlink" title="（一）美元指数预测"></a>（一）美元指数预测</h3><p>假设在2024 - 2030年期间，由于美国经济增长放缓和国际竞争等因素综合影响，美元指数呈现缓慢下降趋势。例如，预计美元指数从2024年的100左右，以每年平均1 - 2点的速度下降到2030年的88 - 90左右。</p>
-<h3 id="（二）通货膨胀率预测"><a href="#（二）通货膨胀率预测" class="headerlink" title="（二）通货膨胀率预测"></a>（二）通货膨胀率预测</h3><p>考虑到全球经济复苏过程中的政策滞后效应和供需因素，预计通货膨胀率在2024 - 2030年期间将维持在一个相对较高的水平，平均在2.5% - 3.5%左右波动。并且可能在某些年份由于突发因素（如局部地区的自然灾害导致农产品供应短缺等）出现短暂的通胀高峰。</p>
-<h3 id="（三）代入模型预测黄金价格"><a href="#（三）代入模型预测黄金价格" class="headerlink" title="（三）代入模型预测黄金价格"></a>（三）代入模型预测黄金价格</h3><ol>
-<li>根据前面的预测数据，将美元指数和通货膨胀率的预测值代入问题一中的回归模型。</li>
-</ol>
-<p>$$</p>
-<ul>
-<li>以2024年为例，假设美元指数为100，通货膨胀率为百分之3，\<br>模型为P &#x3D; 1200 - 0.4\times100+0.2\times3 &#x3D; 1160.6（这里的1200、 - 0.4和0.2是假设的回归系数和截距）。<br>$$</li>
-</ul>
-<ol start="2">
-<li>逐年预测<ul>
-<li>随着美元指数逐年下降和通货膨胀率维持在一定水平，黄金价格在2024 - 2030年期间有望呈现上涨趋势。但由于模型的局限性和实际经济情况的复杂性，价格波动仍会存在。例如，在某些年份如果美元指数出现意外反弹或者通胀得到快速控制，黄金价格的上涨幅度可能会受到抑制甚至出现短暂下跌。</li>
-</ul>
-</li>
-</ol>
-<p>需要注意的是，这只是基于模型和当前经济形势等因素的大致预测，实际黄金价格还会受到许多不可预见因素（如突发的全球性金融危机、重大技术突破影响黄金开采成本等）的影响。</p>
-<h1 id="问题三"><a href="#问题三" class="headerlink" title="问题三"></a>问题三</h1><h2 id="一、全球经济复苏情景"><a href="#一、全球经济复苏情景" class="headerlink" title="一、全球经济复苏情景"></a>一、全球经济复苏情景</h2><h3 id="（一）市场环境分析"><a href="#（一）市场环境分析" class="headerlink" title="（一）市场环境分析"></a>（一）市场环境分析</h3><p>在全球经济复苏的情况下，企业盈利预期改善，股票市场往往表现良好。同时，随着经济复苏，通货膨胀可能会受到一定程度的控制，货币政策也可能逐渐从宽松转向正常化。从黄金价格影响因素来看，美元指数可能会因经济复苏而走强，实际利率也可能上升。根据前面建立的模型（假设美元指数和实际利率与黄金价格负相关），这将对黄金价格产生下行压力。 </p>
-<h3 id="（二）投资策略建议"><a href="#（二）投资策略建议" class="headerlink" title="（二）投资策略建议"></a>（二）投资策略建议</h3><ol>
-<li><strong>资产配置调整</strong>   - 投资者可以适当减少黄金在投资组合中的占比。例如，如果之前黄金投资占总资产的20%，可以考虑将其降低到10% - 15%左右，将资金更多地分配到股票、债券等与经济复苏正相关的资产上。对于股票投资，可以关注受益于经济复苏的行业，如消费、科技、金融等板块；债券投资方面，可以考虑配置国债或优质企业债，获取相对稳定的收益。 </li>
-<li><strong>投资方式选择</strong>   - 对于仍想持有一定黄金资产的投资者，可以考虑采用更灵活的投资方式。例如，通过黄金期货或黄金ETF期权进行投资。在预期黄金价格下降的情况下，投资者可以利用期货或期权的做空机制获取收益。但需要注意的是，这些金融衍生品投资风险较高，需要投资者具备一定的专业知识和交易经验。</li>
-</ol>
-<h2 id="二、政治稳定情景"><a href="#二、政治稳定情景" class="headerlink" title="二、政治稳定情景"></a>二、政治稳定情景</h2><h3 id="（一）市场环境分析-1"><a href="#（一）市场环境分析-1" class="headerlink" title="（一）市场环境分析"></a>（一）市场环境分析</h3><p>政治稳定有利于经济的持续健康发展。在这种情况下，市场风险偏好相对平稳，投资者信心增强。从黄金市场来看，避险需求会降低，美元等主要货币的稳定性也会增强。黄金的供需关系可能更多地受到经济基本面因素（如工业需求和首饰需求）的影响，价格波动相对较小。 </p>
-<h3 id="（二）投资策略建议-1"><a href="#（二）投资策略建议-1" class="headerlink" title="（二）投资策略建议"></a>（二）投资策略建议</h3><ol>
-<li><strong>长期投资为主</strong>   - 投资者可以将黄金作为资产配置中的一种长期保值资产来持有。例如，配置实物黄金或黄金ETF等，其占投资组合的比例可以根据个人的风险偏好和投资目标来确定，一般建议在5% - 15%左右。长期持有可以避免短期价格波动的影响，同时享受黄金在资产保值方面的功能。 </li>
-<li><strong>关注工业需求相关投资机会</strong>   - 由于政治稳定环境下经济发展较为顺利，黄金的工业需求有望增加。投资者可以关注与黄金工业应用相关的企业股票，如黄金加工企业、电子元器件制造企业（黄金在电子领域有广泛应用）等，通过投资这些企业来间接受益于黄金工业需求的增长。</li>
-</ol>
-<h2 id="三、政治不稳定情景"><a href="#三、政治不稳定情景" class="headerlink" title="三、政治不稳定情景"></a>三、政治不稳定情景</h2><h3 id="（一）市场环境分析-2"><a href="#（一）市场环境分析-2" class="headerlink" title="（一）市场环境分析"></a>（一）市场环境分析</h3><p>政治不稳定会引发市场的避险情绪。投资者担心经济和金融市场受到冲击，会寻求避险资产来保护资产价值。在这种情况下，黄金作为传统的避险资产，需求会大幅增加，推动黄金价格上涨。同时，政治不稳定可能会导致货币贬值，尤其是受政治动荡影响较大国家的货币，这也会增强黄金的吸引力。 </p>
-<h3 id="（二）投资策略建议-2"><a href="#（二）投资策略建议-2" class="headerlink" title="（二）投资策略建议"></a>（二）投资策略建议</h3><ol>
-<li><strong>增加黄金投资比例</strong>   - 投资者可以适当增加黄金在投资组合中的比重。对于风险承受能力较高的投资者，可以将黄金投资比例提高到30% - 50%左右。投资方式可以包括购买实物黄金（如金条、金币），这种方式可以直接持有黄金资产，具有较高的安全性；也可以投资黄金ETF，其交易方便，流动性强，能够及时反映黄金价格的变化。</li>
-<li><strong>动态调整投资组合</strong>   - 密切关注政治局势的变化，根据局势的紧张程度和黄金价格的波动情况，动态调整投资组合。例如，当政治紧张局势初现端倪，黄金价格开始上涨时，可以逐步增加黄金投资；当政治局势有所缓和，黄金价格出现回调迹象时，可以适当减少黄金投资，锁定部分收益。同时，也要注意分散投资，避免过度集中于黄金资产，可适当配置一些相对稳定的货币资产（如瑞士法郎等传统避险货币）或国债来平衡风险。</li>
-</ol>
+        <h1 id="P1928-外星密码"><a href="#P1928-外星密码" class="headerlink" title="P1928 外星密码"></a>P1928 外星密码</h1><h2 id="思路：递归"><a href="#思路：递归" class="headerlink" title="思路：递归"></a>思路：递归</h2><p>既然每个[]都代表一个需要解压缩的字段，那么就可以设计一个递归函数</p>
+<p>每次遇到  [  就读取后面的数字并自我调用，将结果存在一个临时字符串</p>
+<p>在加上d个此字符串到结果字符窜上</p>
+<p>而遇到  ]  就返回结果字符串</p>
+<h3 id="附上代码"><a href="#附上代码" class="headerlink" title="附上代码"></a>附上代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function">string <span class="title">unzip</span><span class="params">()</span></span>&#123;</span><br><span class="line">	string ans=<span class="string">&quot;&quot;</span>,s;<span class="comment">//注意ans必须要初始化</span></span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	<span class="type">int</span> d;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;c)&#123;<span class="comment">//输入直到遇到 ] 或结束</span></span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;[&#x27;</span>)&#123;</span><br><span class="line">			cin&gt;&gt;d;<span class="comment">//输入次数</span></span><br><span class="line">			s=<span class="built_in">read</span>();<span class="comment">//自我调用</span></span><br><span class="line">			<span class="keyword">while</span>(d--)ans+=s;<span class="comment">//加d个s到结果上</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;]&#x27;</span>)<span class="keyword">return</span> ans;<span class="comment">//返回</span></span><br><span class="line">		<span class="keyword">else</span> ans+=c;<span class="comment">//那就是一个普通字符，累加到结果上</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;<span class="comment">//非常重要！不然第一层递归就跳出不了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,<span class="built_in">unzip</span>().<span class="built_in">c_str</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/14/%E9%BB%84%E9%87%91/" data-id="cm292759r0003yqnoco5n6fln" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/10/07/%E9%A2%98%E8%A7%A3/" data-id="cm2929x5000024mnodcukg6ft" data-title="题解" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -215,7 +117,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">weiter &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -247,10 +149,6 @@
       <ul>
         
           <li>
-            <a href="/2024/10/14/%E9%BB%84%E9%87%91/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
           </li>
         
@@ -264,6 +162,10 @@
         
           <li>
             <a href="/2024/10/04/vim/">vim</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
           </li>
         
       </ul>

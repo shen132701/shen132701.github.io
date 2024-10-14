@@ -69,10 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="pages-vim" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="pages-ubuntu-hexo-gitub" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/04/vim/" class="article-date">
-  <time class="dt-published" datetime="2024-10-04T12:21:46.000Z" itemprop="datePublished">2024-10-04</time>
+    <a href="/2024/10/04/ubuntu-hexo-gitub/" class="article-date">
+  <time class="dt-published" datetime="2024-10-04T12:20:42.000Z" itemprop="datePublished">2024-10-04</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/04/vim/">vim</a>
+      <a class="p-name article-title" href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
     </h1>
   
 
@@ -91,37 +91,68 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="vim操作大合集（船新版本）"><a href="#vim操作大合集（船新版本）" class="headerlink" title="vim操作大合集（船新版本）"></a>vim操作大合集（船新版本）</h1><p>观前提示： 单词 是算上标点符号，单词没有</p>
-<h2 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h2><p>k:上	  j:下  	h:左	l:右</p>
-<p>w:下一个单词头	W:下一个 单词 头</p>
-<p>e:下一个单词尾	E:下一个 单词 尾</p>
-<p>b:上一个单词头	B:上一个 单词 头</p>
-<p>f+字符:行内往后直到下一个字符	F+字符:行内往前直到下一个字符</p>
-<p>t+字符:行内往后直到下一个字符前	T+字符:行内往前直到下一个字符后</p>
-<p>; :重复上一次f t操作	, :反向上一次f t操作</p>
-<p>gg:文章第一行首	G:文末行首</p>
-<p>#:在文中寻找上一个当前单词头	*:在文中寻找下一个当前单词头</p>
-<p>n:重复上次# *操作	N:反向上次# *操作</p>
-<p>^:软行首（不算空格）	0:硬行首（算空格）</p>
-<p>$:行末</p>
-<p>}:下一空行(没有则文末)	{:上一空行(没有则文首)</p>
-<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><p>x:delete	X:backspace</p>
-<p>r+字符：修改为_</p>
-<p>i:在本字符前插入	I:行首插入</p>
-<p>a:在本字符后插入	A:行末插入</p>
-<p>s:删除字符并插入	S:删除行并插入</p>
-<p>d+移动:删除至__	D:删除至行末</p>
-<p>c+移动:删除至__并插入	C:删除至行末并插入</p>
-<h2 id="关于寄存器"><a href="#关于寄存器" class="headerlink" title="关于寄存器"></a>关于寄存器</h2><p>删除，修改，复制，粘贴前加”a-z 0-9可以指定剪切板</p>
-<p>y+移动:复制至__	Y:复制至行末</p>
-<p>p:在字符前粘贴	P:在字符后粘贴</p>
-<h2 id="qiqi怪怪的命令"><a href="#qiqi怪怪的命令" class="headerlink" title="qiqi怪怪的命令"></a>qiqi怪怪的命令</h2><p>ci+任意类左括号：将这组括号包括的区删除（不删括号）</p>
-<p>ca+任意类左括号：将这组括号包括的区删除（删括号）</p>
+        <h1 id="在ubuntu环境将hexo搭建并配至gihub"><a href="#在ubuntu环境将hexo搭建并配至gihub" class="headerlink" title="在ubuntu环境将hexo搭建并配至gihub"></a>在ubuntu环境将hexo搭建并配至gihub</h1><h3 id="开袋即食-恐怖hexo无伤速通"><a href="#开袋即食-恐怖hexo无伤速通" class="headerlink" title="开袋即食:恐怖hexo无伤速通"></a>开袋即食:恐怖hexo无伤速通</h3><p>第一阶段：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update&amp;&amp;sudo apt install npm nodejs git&amp;&amp;mkdir blog &amp;&amp;cd blog &amp;&amp;hexo init&amp;&amp;npm install&amp;&amp;npm install hexo-deployer-git --save&amp;&amp;git config --global user.name &quot;github的用户名&quot;&amp;&amp;git config --global user.email &quot;github的邮箱地址&quot;&amp;&amp;ssh-keygen -t rsa -b 4096 -C &quot;github的邮箱地址&quot;&amp;&amp;cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>然后需手动修改config和生成密钥</p>
+<p>第二阶段：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h2><h3 id="下载需要的软件"><a href="#下载需要的软件" class="headerlink" title="下载需要的软件"></a>下载需要的软件</h3><p>可以先更新一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<p>然后下载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install npm nodejs git</span><br></pre></td></tr></table></figure>
+
+<p>没底气可以看下版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v&amp;&amp;node -v &amp;&amp;git -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置博客文件夹"><a href="#配置博客文件夹" class="headerlink" title="配置博客文件夹"></a>配置博客文件夹</h3><p>创建文件夹并进入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog &amp;&amp;cd blog </span><br></pre></td></tr></table></figure>
+
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init&amp;&amp;npm install&amp;&amp;npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>上传至本地</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp;hexo g&amp;&amp;hexo s</span><br></pre></td></tr></table></figure>
+
+<p>打开出现的链接，就可以看到了</p>
+<h2 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h2><p>设置个人信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;github的用户名&quot;</span><br><span class="line">git config --global user.email &quot;github的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>去github上创建一个repository（仓库）</p>
+<p>进入仓库主界面，点一下中央绿油油的code旁边的箭头</p>
+<p>复制ssh地址后，回到blog文件夹</p>
+<h3 id="修改config-yml"><a href="#修改config-yml" class="headerlink" title="修改config.yml"></a>修改config.yml</h3><p>打开后最上面是基础信息，酌情填写</p>
+<p>拉到最下面，修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: &quot;粘贴&quot;</span><br><span class="line">	branch: &quot;github上仓库的分支名&quot;</span><br></pre></td></tr></table></figure>
+
+<p>保存退出</p>
+<h3 id="配置密钥"><a href="#配置密钥" class="headerlink" title="配置密钥"></a>配置密钥</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;github的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+
+<p>连续按3个回车，再</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+<p>复制全部内容，到github上</p>
+<p>右上角头像-&gt;setting-&gt;ssh and gpg key</p>
+<p>点击上面的绿色按钮，名字随意，在下面全部粘贴</p>
+<p>点击生成</p>
+<h1 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h1><p>返回blog文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>就完成辣：）</p>
+<h2 id="注：hexo食用方法"><a href="#注：hexo食用方法" class="headerlink" title="注：hexo食用方法"></a>注：hexo食用方法</h2><p>生成新文章：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new pages xxx</span><br></pre></td></tr></table></figure>
+
+<p>修改后上传：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/04/vim/" data-id="cm292759m0001yqnoe0pyda4a" data-title="vim" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/10/04/ubuntu-hexo-gitub/" data-id="cm2929x4h00004mnoakck3h11" data-title="ubuntu-hexo-gitub" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -137,7 +168,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">weiter &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
   </nav>
 
 </section>
@@ -169,10 +200,6 @@
       <ul>
         
           <li>
-            <a href="/2024/10/14/%E9%BB%84%E9%87%91/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
           </li>
         
@@ -186,6 +213,10 @@
         
           <li>
             <a href="/2024/10/04/vim/">vim</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
           </li>
         
       </ul>
