@@ -6,15 +6,15 @@
   
   <title>algorithm | blog之乡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="空巢算法收容所&lt;关爱空巢算法&gt;记忆化搜索适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推 主要思路：用一个列表存储已经递归过的数据 代码(例题：P1464)1234567891011121314151617181920212223#include&lt;iostream&gt;#include&lt;math.h&gt; #include&lt;algo">
+  <meta name="description" content="算法收容所&lt;关爱空巢算法&gt;记忆化搜索适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推 主要思路：用一个列表存储已经递归过的数据 代码(例题：P1464)1234567891011121314151617181920212223#include&lt;iostream&gt;#include&lt;math.h&gt; #include&lt;algori">
 <meta property="og:type" content="article">
 <meta property="og:title" content="algorithm">
 <meta property="og:url" content="http://example.com/2024/10/04/c++/algorithm/index.html">
 <meta property="og:site_name" content="blog之乡">
-<meta property="og:description" content="空巢算法收容所&lt;关爱空巢算法&gt;记忆化搜索适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推 主要思路：用一个列表存储已经递归过的数据 代码(例题：P1464)1234567891011121314151617181920212223#include&lt;iostream&gt;#include&lt;math.h&gt; #include&lt;algo">
+<meta property="og:description" content="算法收容所&lt;关爱空巢算法&gt;记忆化搜索适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推 主要思路：用一个列表存储已经递归过的数据 代码(例题：P1464)1234567891011121314151617181920212223#include&lt;iostream&gt;#include&lt;math.h&gt; #include&lt;algori">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-10-04T12:22:02.000Z">
-<meta property="article:modified_time" content="2024-10-06T01:08:28.394Z">
+<meta property="article:modified_time" content="2024-10-07T02:45:32.048Z">
 <meta property="article:author" content="somebody">
 <meta name="twitter:card" content="summary">
   
@@ -93,7 +93,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="空巢算法收容所"><a href="#空巢算法收容所" class="headerlink" title="空巢算法收容所&lt;关爱空巢算法&gt;"></a>空巢算法收容所&lt;关爱空巢算法&gt;</h1><h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><p>适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推</p>
+        <h1 id="算法收容所"><a href="#算法收容所" class="headerlink" title="算法收容所&lt;关爱空巢算法&gt;"></a>算法收容所&lt;关爱空巢算法&gt;</h1><h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><p>适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推</p>
 <p>主要思路：用一个列表存储已经递归过的数据</p>
 <h3 id="代码-例题：P1464"><a href="#代码-例题：P1464" class="headerlink" title="代码(例题：P1464)"></a>代码(例题：P1464)</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span> </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">ll ji[<span class="number">21</span>][<span class="number">21</span>][<span class="number">21</span>];</span><br><span class="line"><span class="function">ll <span class="title">f</span><span class="params">(ll a,ll b,ll c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a&lt;<span class="number">1</span>||b&lt;<span class="number">1</span>||c&lt;<span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;<span class="number">20</span>||b&gt;<span class="number">20</span>||c&gt;<span class="number">20</span>)<span class="keyword">return</span> <span class="built_in">f</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>);<span class="comment">//特判</span></span><br><span class="line">	<span class="keyword">if</span>(a&lt;b&amp;&amp;b&lt;c)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b][c<span class="number">-1</span>])ji[a][b][c<span class="number">-1</span>]=<span class="built_in">f</span>(a,b,c<span class="number">-1</span>);<span class="comment">//若此需要用的数据还未找到，就先找这个数据，以下同理</span></span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>])ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>]=<span class="built_in">f</span>(a,b<span class="number">-1</span>,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b<span class="number">-1</span>][c])ji[a][b<span class="number">-1</span>][c]=<span class="built_in">f</span>(a,b<span class="number">-1</span>,c);</span><br><span class="line">		<span class="keyword">return</span> ji[a][b][c<span class="number">-1</span>]+ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>]-ji[a][b<span class="number">-1</span>][c];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b][c])ji[a<span class="number">-1</span>][b][c]=<span class="built_in">f</span>(a<span class="number">-1</span>,b,c);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c])ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c]=<span class="built_in">f</span>(a<span class="number">-1</span>,b<span class="number">-1</span>,c);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>])ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>]=<span class="built_in">f</span>(a<span class="number">-1</span>,b,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>])ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>]=<span class="built_in">f</span>(a<span class="number">-1</span>,b<span class="number">-1</span>,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">return</span> ji[a<span class="number">-1</span>][b][c]+ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c]+ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>]-ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -103,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/04/c++/algorithm/" data-id="cm1yepgo100033znoe9yc9wgy" data-title="algorithm" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/10/04/c++/algorithm/" data-id="cm292759t0004yqno8k4d3g5m" data-title="algorithm" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -163,6 +163,10 @@
       <ul>
         
           <li>
+            <a href="/2024/10/14/%E9%BB%84%E9%87%91/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
           </li>
         
@@ -176,10 +180,6 @@
         
           <li>
             <a href="/2024/10/04/vim/">vim</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
           </li>
         
       </ul>

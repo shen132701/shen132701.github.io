@@ -69,10 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="pages-c++/好用的stl" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="pages-题解" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/" class="article-date">
-  <time class="dt-published" datetime="2024-10-04T12:22:20.000Z" itemprop="datePublished">2024-10-04</time>
+    <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2024-10-07T02:26:12.000Z" itemprop="datePublished">2024-10-07</time>
 </a>
     
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/">好用的stl</a>
+      <a class="p-name article-title" href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
     </h1>
   
 
@@ -91,15 +91,17 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="不废话-开袋即食"><a href="#不废话-开袋即食" class="headerlink" title="不废话 开袋即食"></a>不废话 开袋即食</h1><h2 id="cstring库"><a href="#cstring库" class="headerlink" title="cstring库"></a>cstring库</h2><p>stoi(字符串)：转数字</p>
-<h2 id="algorithm库"><a href="#algorithm库" class="headerlink" title="algorithm库"></a>algorithm库</h2><p>next_permutation(里面参数和sort参数格式一致)：数组按字典序的下一种排列</p>
-<p>prev_permutation(里面参数和sort参数格式一致)：数组按字典序的上一种排列</p>
-<h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><p>priority_queue &lt;数据类型，存储方式(一般为vector <int>),less(大优先)&#x2F;greater(小优先)<int>&gt;</p>
+        <h1 id="P1928-外星密码"><a href="#P1928-外星密码" class="headerlink" title="P1928 外星密码"></a>P1928 外星密码</h1><h2 id="思路：递归"><a href="#思路：递归" class="headerlink" title="思路：递归"></a>思路：递归</h2><p>既然每个[]都代表一个需要解压缩的字段，那么就可以设计一个递归函数</p>
+<p>每次遇到  [  就读取后面的数字并自我调用，将结果存在一个临时字符串</p>
+<p>在加上d个此字符串到结果字符窜上</p>
+<p>而遇到  ]  就返回结果字符串</p>
+<h3 id="附上代码"><a href="#附上代码" class="headerlink" title="附上代码"></a>附上代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function">string <span class="title">unzip</span><span class="params">()</span></span>&#123;</span><br><span class="line">	string ans=<span class="string">&quot;&quot;</span>,s;<span class="comment">//注意ans必须要初始化</span></span><br><span class="line">	<span class="type">char</span> c;</span><br><span class="line">	<span class="type">int</span> d;</span><br><span class="line">	<span class="keyword">while</span>(cin&gt;&gt;c)&#123;<span class="comment">//输入直到遇到 ] 或结束</span></span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">&#x27;[&#x27;</span>)&#123;</span><br><span class="line">			cin&gt;&gt;d;<span class="comment">//输入次数</span></span><br><span class="line">			s=<span class="built_in">read</span>();<span class="comment">//自我调用</span></span><br><span class="line">			<span class="keyword">while</span>(d--)ans+=s;<span class="comment">//加d个s到结果上</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;]&#x27;</span>)<span class="keyword">return</span> ans;<span class="comment">//返回</span></span><br><span class="line">		<span class="keyword">else</span> ans+=c;<span class="comment">//那就是一个普通字符，累加到结果上</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;<span class="comment">//非常重要！不然第一层递归就跳出不了</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,<span class="built_in">unzip</span>().<span class="built_in">c_str</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/" data-id="cm1yepgo200043znof3kl4dvc" data-title="好用的stl" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/10/07/%E9%A2%98%E8%A7%A3/" data-id="cm292759p0002yqno7xxg7fqt" data-title="题解" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -115,7 +117,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -147,6 +149,10 @@
       <ul>
         
           <li>
+            <a href="/2024/10/14/%E9%BB%84%E9%87%91/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
           </li>
         
@@ -160,10 +166,6 @@
         
           <li>
             <a href="/2024/10/04/vim/">vim</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
           </li>
         
       </ul>
