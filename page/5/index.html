@@ -69,90 +69,55 @@
       <div class="outer">
         <section id="main">
   
-    <article id="pages-ubuntu-hexo-gitub" class="h-entry article article-type-pages" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-algorithm" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/04/ubuntu-hexo-gitub/" class="article-date">
-  <time class="dt-published" datetime="2024-10-04T12:20:42.000Z" itemprop="datePublished">2024-10-04</time>
+    <a href="/2024/10/04/algorithm/" class="article-date">
+  <time class="dt-published" datetime="2024-10-04T12:22:02.324Z" itemprop="datePublished">2024-10-04</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="在ubuntu环境将hexo搭建并配至gihub"><a href="#在ubuntu环境将hexo搭建并配至gihub" class="headerlink" title="在ubuntu环境将hexo搭建并配至gihub"></a>在ubuntu环境将hexo搭建并配至gihub</h1><h3 id="开袋即食-恐怖hexo无伤速通"><a href="#开袋即食-恐怖hexo无伤速通" class="headerlink" title="开袋即食:恐怖hexo无伤速通"></a>开袋即食:恐怖hexo无伤速通</h3><p>第一阶段：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update&amp;&amp;sudo apt install npm nodejs git&amp;&amp;mkdir blog &amp;&amp;cd blog &amp;&amp;hexo init&amp;&amp;npm install&amp;&amp;npm install hexo-deployer-git --save&amp;&amp;git config --global user.name &quot;github的用户名&quot;&amp;&amp;git config --global user.email &quot;github的邮箱地址&quot;&amp;&amp;ssh-keygen -t rsa -b 4096 -C &quot;github的邮箱地址&quot;&amp;&amp;cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+        <h1 id="算法收容所"><a href="#算法收容所" class="headerlink" title="算法收容所&lt;关爱空巢算法&gt;"></a>算法收容所&lt;关爱空巢算法&gt;</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>适用于：数据成递增&#x2F;递减，范围较大</p>
+<p>思路：二分查找</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">11000</span>],n;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">pand</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">findd</span><span class="params">(<span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> l=<span class="number">1</span>,r=n,mid;</span><br><span class="line">	<span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">		mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">pand</span>(mid))r=mid<span class="number">-1</span>;<span class="comment">//这里符合条件是改变l还是r根据实际情况而定</span></span><br><span class="line">		<span class="keyword">else</span> l=mid<span class="number">+1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> r;<span class="comment">//最终结果也是按情况模拟最后当l和r重合的情况来决定</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>然后需手动修改config和生成密钥</p>
-<p>第二阶段：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="高精度"><a href="#高精度" class="headerlink" title="高精度"></a>高精度</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">add</span><span class="params">(string a,string b)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> la=a.<span class="built_in">size</span>(),lb=b.<span class="built_in">size</span>(),mmax=<span class="built_in">max</span>(la,lb)<span class="number">+1</span>,aa[<span class="number">1000</span>]=&#123;&#125;,bb[<span class="number">1000</span>]=&#123;&#125;,ss[<span class="number">1000</span>]=&#123;&#125;;</span><br><span class="line">	string ans=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i=la<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)aa[la-i<span class="number">-1</span>]=a[i]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=lb<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)bb[lb-i<span class="number">-1</span>]=b[i]-<span class="string">&#x27;0&#x27;</span>;<span class="comment">//转数字</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=mmax;i++)&#123;</span><br><span class="line">		ss[i]+=aa[i]+bb[i];<span class="comment">//相加</span></span><br><span class="line">		ss[i<span class="number">+1</span>]+=ss[i]/<span class="number">10</span>;<span class="comment">//进位</span></span><br><span class="line">		ss[i]%=<span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(;ss[mmax]==<span class="number">0</span>;mmax--);<span class="comment">//去除前导0</span></span><br><span class="line">	<span class="keyword">for</span>(;mmax&gt;=<span class="number">0</span>;mmax--)&#123;</span><br><span class="line">		ans+=ss[mmax]+<span class="string">&#x27;0&#x27;</span>;<span class="comment">//转字符串</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">string <span class="title">add</span><span class="params">(string a,string b)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> la=a.<span class="built_in">size</span>(),lb=b.<span class="built_in">size</span>(),mmax=la+lb<span class="number">+1</span>,aa[<span class="number">1000</span>]=&#123;&#125;,bb[<span class="number">1000</span>]=&#123;&#125;,ss[<span class="number">1000</span>]=&#123;&#125;;</span><br><span class="line">	string ans=<span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="type">int</span> i,j;</span><br><span class="line">	<span class="keyword">for</span>(i=la<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)aa[la-i<span class="number">-1</span>]=a[i]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=lb<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)bb[lb-i<span class="number">-1</span>]=b[i]-<span class="string">&#x27;0&#x27;</span>;<span class="comment">//转数字</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;la;i++)</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;lb;j++)&#123;<span class="comment">//原理就是用竖式算乘法</span></span><br><span class="line">			ss[i+j]+=aa[i]*bb[j];<span class="comment">//相乘</span></span><br><span class="line">			ss[i+j<span class="number">+1</span>]+=ss[i+j]/<span class="number">10</span>;<span class="comment">//进位</span></span><br><span class="line">			ss[i+j]%=<span class="number">10</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">for</span>(;ss[mmax]==<span class="number">0</span>;mmax--);<span class="comment">//去除前导0</span></span><br><span class="line">	<span class="keyword">for</span>(;mmax&gt;=<span class="number">0</span>;mmax--)&#123;</span><br><span class="line">		ans+=ss[mmax]+<span class="string">&#x27;0&#x27;</span>;<span class="comment">//转字符串</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h2><h3 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	<span class="keyword">for</span>(j=m;j&gt;=w[i];j--)<span class="comment">//正着遍历，这样可以调用已经买过这个物品的数据</span></span><br><span class="line">		ans[j]=<span class="built_in">max</span>(ans[j],ans[j-w[i]]+c[i]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,ans[m]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	<span class="keyword">for</span>(j=w[i];j&lt;=m;j++)<span class="comment">//反着遍历，这样只能调用没有买过这个物品的数据</span></span><br><span class="line">		ans[j]=<span class="built_in">max</span>(ans[j],ans[j-w[i]]+c[i]);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,ans[m]);</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h2><h3 id="下载需要的软件"><a href="#下载需要的软件" class="headerlink" title="下载需要的软件"></a>下载需要的软件</h3><p>可以先更新一下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+<h2 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h2><p>适用于：递归及搜索范围较小，但重复次数较多的情况，并且递归式较复杂，不方便用递推</p>
+<p>主要思路：用一个列表存储已经递归过的数据</p>
+<h3 id="代码-例题：P1464"><a href="#代码-例题：P1464" class="headerlink" title="代码(例题：P1464)"></a>代码(例题：P1464)</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1464">https://www.luogu.com.cn/problem/P1464</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">ll ji[<span class="number">21</span>][<span class="number">21</span>][<span class="number">21</span>];</span><br><span class="line"><span class="function">ll <span class="title">f</span><span class="params">(ll a,ll b,ll c)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a&lt;<span class="number">1</span>||b&lt;<span class="number">1</span>||c&lt;<span class="number">1</span>)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(a&gt;<span class="number">20</span>||b&gt;<span class="number">20</span>||c&gt;<span class="number">20</span>)<span class="keyword">return</span> <span class="built_in">f</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>);<span class="comment">//特判</span></span><br><span class="line">	<span class="keyword">if</span>(a&lt;b&amp;&amp;b&lt;c)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b][c<span class="number">-1</span>])ji[a][b][c<span class="number">-1</span>]=<span class="built_in">f</span>(a,b,c<span class="number">-1</span>);<span class="comment">//若此需要用的数据还未找到，就先找这个数据，以下同理</span></span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>])ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>]=<span class="built_in">f</span>(a,b<span class="number">-1</span>,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a][b<span class="number">-1</span>][c])ji[a][b<span class="number">-1</span>][c]=<span class="built_in">f</span>(a,b<span class="number">-1</span>,c);</span><br><span class="line">		<span class="keyword">return</span> ji[a][b][c<span class="number">-1</span>]+ji[a][b<span class="number">-1</span>][c<span class="number">-1</span>]-ji[a][b<span class="number">-1</span>][c];</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b][c])ji[a<span class="number">-1</span>][b][c]=<span class="built_in">f</span>(a<span class="number">-1</span>,b,c);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c])ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c]=<span class="built_in">f</span>(a<span class="number">-1</span>,b<span class="number">-1</span>,c);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>])ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>]=<span class="built_in">f</span>(a<span class="number">-1</span>,b,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">if</span>(!ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>])ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>]=<span class="built_in">f</span>(a<span class="number">-1</span>,b<span class="number">-1</span>,c<span class="number">-1</span>);</span><br><span class="line">		<span class="keyword">return</span> ji[a<span class="number">-1</span>][b][c]+ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c]+ji[a<span class="number">-1</span>][b][c<span class="number">-1</span>]-ji[a<span class="number">-1</span>][b<span class="number">-1</span>][c<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>然后下载：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install npm nodejs git</span><br></pre></td></tr></table></figure>
+<h2 id="快速幂"><a href="#快速幂" class="headerlink" title="快速幂"></a>快速幂</h2><p>用于：数据较大，但最终需要mod一个小整数</p>
+<p>主要思路：将a^b转换为a^(2^n1)*a^(2^n2)…</p>
+<p>例如：3^9&#x3D;3^(1001(2))&#x3D;3^(2^3)*3^(2^0)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> a,b,l,p,ans=<span class="number">1</span>,tem;	</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;a,&amp;b,&amp;p);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld^%lld mod %lld=&quot;</span>,a,b,p);</span><br><span class="line">	tem=a;</span><br><span class="line">	<span class="keyword">while</span>(b)&#123;</span><br><span class="line">		<span class="keyword">if</span>(b&amp;<span class="number">1</span>)ans=(ans*tem)%p;<span class="comment">//若指数为奇数，则乘a^(当前轮数)</span></span><br><span class="line">		tem=(tem*tem)%p;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">					</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>没底气可以看下版本：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v&amp;&amp;node -v &amp;&amp;git -v</span><br></pre></td></tr></table></figure>
+<p>同理，得到快速乘</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="type">long</span> a,b,p,ans,tmp;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;a,&amp;b,&amp;p);</span><br><span class="line">	tmp=a;</span><br><span class="line">	<span class="keyword">while</span>(b)&#123;</span><br><span class="line">		<span class="keyword">if</span>(b&amp;<span class="number">1</span>)ans=(ans+tmp)%p;</span><br><span class="line">		tmp=(tmp&lt;&lt;<span class="number">1</span>)%p;</span><br><span class="line">		b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%lld&quot;</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="配置博客文件夹"><a href="#配置博客文件夹" class="headerlink" title="配置博客文件夹"></a>配置博客文件夹</h3><p>创建文件夹并进入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog &amp;&amp;cd blog </span><br></pre></td></tr></table></figure>
-
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init&amp;&amp;npm install&amp;&amp;npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>上传至本地</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp;hexo g&amp;&amp;hexo s</span><br></pre></td></tr></table></figure>
-
-<p>打开出现的链接，就可以看到了</p>
-<h2 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h2><p>设置个人信息：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;github的用户名&quot;</span><br><span class="line">git config --global user.email &quot;github的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
-
-<p>去github上创建一个repository（仓库）</p>
-<p>进入仓库主界面，点一下中央绿油油的code旁边的箭头</p>
-<p>复制ssh地址后，回到blog文件夹</p>
-<h3 id="修改config-yml"><a href="#修改config-yml" class="headerlink" title="修改config.yml"></a>修改config.yml</h3><p>打开后最上面是基础信息，酌情填写</p>
-<p>拉到最下面，修改为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: &quot;粘贴&quot;</span><br><span class="line">	branch: &quot;github上仓库的分支名&quot;</span><br></pre></td></tr></table></figure>
-
-<p>保存退出</p>
-<h3 id="配置密钥"><a href="#配置密钥" class="headerlink" title="配置密钥"></a>配置密钥</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;github的邮箱地址&quot;</span><br></pre></td></tr></table></figure>
-
-<p>连续按3个回车，再</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>复制全部内容，到github上</p>
-<p>右上角头像-&gt;setting-&gt;ssh and gpg key</p>
-<p>点击上面的绿色按钮，名字随意，在下面全部粘贴</p>
-<p>点击生成</p>
-<h1 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h1><p>返回blog文件夹</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>就完成辣：）</p>
-<h2 id="注：hexo食用方法"><a href="#注：hexo食用方法" class="headerlink" title="注：hexo食用方法"></a>注：hexo食用方法</h2><p>生成新文章：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new pages xxx</span><br></pre></td></tr></table></figure>
-
-<p>修改后上传：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+<h2 id="状态压缩"><a href="#状态压缩" class="headerlink" title="状态压缩"></a>状态压缩</h2><p>用于：总数较少，方法较多，</p>
+<p>主要思路：用一个数，二进制上的每一位表示每个点是否遍历到，用一个数组记录</p>
+<h3 id="例题：P10447"><a href="#例题：P10447" class="headerlink" title="例题：P10447"></a>例题：P10447</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P10447">https://www.luogu.com.cn/problem/P10447</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> inf=<span class="number">0x3f</span>;</span><br><span class="line"><span class="type">int</span> n,jl[<span class="number">21</span>][<span class="number">21</span>],zt[<span class="number">1</span>&lt;&lt;<span class="number">20</span><span class="number">+1</span>][<span class="number">21</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">	<span class="type">int</span> k,i,j;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;jl[i][j]);</span><br><span class="line">	<span class="built_in">memset</span>(zt,inf,<span class="built_in">sizeof</span>(zt));</span><br><span class="line">	zt[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(k=<span class="number">0</span>;k&lt;(<span class="number">1</span>&lt;&lt;n);k++)</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(k&gt;&gt;i==<span class="number">0</span>)<span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(k&gt;&gt;j==<span class="number">0</span>)<span class="keyword">continue</span>;</span><br><span class="line">				zt[k][i]=<span class="built_in">min</span>(zt[k][i],zt[k^(<span class="number">1</span>&lt;&lt;i)][j]+jl[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,zt[(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>][n<span class="number">-1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/04/ubuntu-hexo-gitub/" data-id="cm2lwius4000013no3d4c2fky" data-title="ubuntu-hexo-gitub" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/10/04/algorithm/" data-id="cm2n4ig3a0000f4no34q5f5cg" data-title="" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -168,7 +133,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -200,23 +165,23 @@
       <ul>
         
           <li>
+            <a href="/2024/10/24/markdown/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/24/%E6%95%B0%E8%AE%BA/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2024/10/07/%E9%A2%98%E8%A7%A3/">题解</a>
           </li>
         
           <li>
-            <a href="/2024/10/04/c++/%E5%A5%BD%E7%94%A8%E7%9A%84stl/">好用的stl</a>
+            <a href="/2024/10/04/%E5%A5%BD%E7%94%A8%E7%9A%84stl/">好用的stl</a>
           </li>
         
           <li>
-            <a href="/2024/10/04/c++/algorithm/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/04/vim/">vim</a>
-          </li>
-        
-          <li>
-            <a href="/2024/10/04/ubuntu-hexo-gitub/">ubuntu-hexo-gitub</a>
+            <a href="/2024/10/04/algorithm/">(no title)</a>
           </li>
         
       </ul>
